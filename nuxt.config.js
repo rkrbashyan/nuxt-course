@@ -47,8 +47,7 @@ module.exports = {
   * for example '@nuxtjs/axios'
   * https://github.com/nuxt-community/awesome-nuxt#modules
   */
-  modules: [],
-
+  modules: ['nuxt-purgecss'],
   /*
   ** Build configuration
   */
@@ -56,6 +55,13 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    postcss: {
+      plugins: {
+        tailwindcss: './tailwind.js',
+        autoprefixer: {}
+      }
+    },
+    extractCSS: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

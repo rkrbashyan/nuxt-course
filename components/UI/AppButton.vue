@@ -1,5 +1,10 @@
 <template>
-  <button :class="btnStyle" v-bind="$attrs" class="button" v-on="$listeners">
+  <button
+    :class="btnStyle"
+    v-bind="$attrs"
+    class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white"
+    v-on="$listeners"
+  >
     <slot/>
   </button>
 </template>

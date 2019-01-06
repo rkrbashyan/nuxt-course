@@ -33,6 +33,7 @@ export default {
       .then(response => ({ loadedPost: response.data }))
       .catch(e => context.error(e))
   },
+  // head must be a function to use data object
   head() {
     return {
       title: 'Blog post by: ' + this.loadedPost.author

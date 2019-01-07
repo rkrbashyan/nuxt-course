@@ -51,6 +51,10 @@ module.exports = {
   /*
   ** Build configuration
   */
+
+  purgeCSS: {
+    mode: 'postcss'
+  },
   build: {
     /*
     ** You can extend webpack config here
@@ -61,7 +65,7 @@ module.exports = {
         autoprefixer: {}
       }
     },
-    extractCSS: true,
+    // extractCSS: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
